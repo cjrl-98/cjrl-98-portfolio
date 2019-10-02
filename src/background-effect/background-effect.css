@@ -1,4 +1,5 @@
 .background-effect-container{
+    z-index: -50;
     position: fixed;
     height: 100%;
     width: 100%;
