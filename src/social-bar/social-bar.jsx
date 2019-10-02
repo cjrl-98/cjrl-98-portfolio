@@ -2,24 +2,26 @@ import React from "react";
 
 import "./social-bar.css";
 
+import DribbleIcon from "../images/png/dribbble-ball-icon.png";
+import LinkedInIcon from "../images/png/linkedin-icon.png";
+import GitHubIcon from "../images/png/git-hub-icon.png";
+
+
 const SocialBar = () => {
     return (
         <div className="social-side-bar">
-      <a href="https://www.linkedin.com/in/christian-lagasca-5a1625186/">
-        <i class="fab fa-linkedin social-icons"></i>
-        <span>LinkedIn</span>
-      </a>
+          <a href="https://www.linkedin.com/in/christian-lagasca-5a1625186">
+            <img src={LinkedInIcon} alt = "linkedIn icon"/>    
+          </a>
+          <a href="https://dribbble.com/cjrl_">
+            <img src={DribbleIcon} alt = "dribbble icon"/>
+          </a>
 
-      <a href="https://dribbble.com/cjrl_">
-        <i class="fab fa-dribbble social-icons"></i>
-        <span>Dribbble</span>
-      </a>
-
-      <a href="https://github.com/cjrl-98">
-        <i class="fab fa-github social-icons"></i>
-        <span>GitHub</span>
-      </a>
-    </div>
+          <a href="https://github.com/cjrl-98">
+            <img src={GitHubIcon} alt="git hub icon"/>
+ 
+          </a>
+        </div>
     );
 };
 

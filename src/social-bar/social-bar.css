@@ -6,12 +6,6 @@
     margin: 0 1rem;
     color: #1d1d1d;
 }
-.social-side-bar a i {
-    font-size: 1rem;
-}
-.social-side-bar .fa-dribbble{
-    color: #cc2c70;
-}
-.social-side-bar a span {
-    display: none;
+.social-side-bar a img {
+    width: 1rem;
 }
