@@ -1,7 +1,7 @@
 .background-effect-container{
     position: fixed;
     height: 100%;
-   
+    width: 100%;
 }
 .stars {
     width: 0.1rem;

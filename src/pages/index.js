@@ -1,5 +1,7 @@
 import React from "react";
-import { Link } from "gatsby";
+import {
+    Link
+} from "gatsby";
 
 import "../css/index.css";
 
@@ -10,17 +12,13 @@ import SocialBar from "../social-bar/social-bar";
 import BackgroundEffect from "../background-effect/background-effect";
 
 const IndexPage = () => (
-    <React.Fragment>
+    <div className="content-container flex-container flex-direction-column flex-space-between">
       <PortfolioHelmet/>
       <BackgroundEffect/>
       <Header/>
-      <div class="container">    
-        <div className="element">
-          <HomePage/>
-        </div>
-      </div>
+      <HomePage/>
       <SocialBar/>
-    </React.Fragment>
+    </div>
 )
 
 export default IndexPage;

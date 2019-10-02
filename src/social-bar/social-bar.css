@@ -1,24 +1,17 @@
 .social-side-bar{
     text-align: center;
     margin: 1rem 0;
-    position: fixed;
-    bottom: 0.3rem;
-    width: 100%;
 }
-
 .social-side-bar a{
-   margin: 0 1rem;
+    margin: 0 1rem;
     color: #1d1d1d;
 }
-
 .social-side-bar a i {
     font-size: 1rem;
 }
-
 .social-side-bar .fa-dribbble{
     color: #cc2c70;
 }
-
 .social-side-bar a span {
     display: none;
 }
