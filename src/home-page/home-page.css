@@ -1,0 +1,55 @@
+.home-container{
+    overflow: hidden;
+    position: relative;
+}
+
+
+.home-container .home-text-wrapper{
+    position: absolute;
+    z-index: 1;
+    top: 3.5rem;
+    left: 1rem;
+}
+
+.home-text-wrapper h1{
+    font-size: 3.4rem;
+    font-weight: 900;
+    letter-spacing: 0.5vw;
+}
+.home-text-wrapper h2{
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.2vw;
+    margin: 0.2rem 0 0 0.2rem;
+}
+
+.home-text-wrapper h2 span{
+    color: #D4737E;
+}
+.alert-card{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0 0 0;
+}
+.alert-card p {
+    width: 15rem;
+    font-size: 10px;
+    letter-spacing: 0.1vw;
+    opacity: 0.5;
+    margin: 0 0 0 0.5rem;
+    line-height: 0.9rem;
+}
+
+.alert-card .fa-exclamation-circle{
+    color: #D4737E;
+    
+}
+
+.home-container img{
+    position: relative;
+    z-index: -1;
+    min-width: 290px;
+    left: 43vw;
+    width: 28vw;
+}
+
