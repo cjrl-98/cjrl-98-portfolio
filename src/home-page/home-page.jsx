@@ -1,8 +1,7 @@
 import React from 'react';
 
 import './home-page.css';
-
-import CnTowerSkyline from '../images/svg/CnTowerSkyline.svg';
+import '../css/main.css'
 
 class HomePage extends React.Component {
     render() {

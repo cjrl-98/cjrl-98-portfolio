@@ -1,9 +1,8 @@
 import React from "react";
-import {
-    Link
-} from "gatsby";
+import {Link} from "gatsby";
 
-import "../css/index.css";
+import "../css/reset.css";
+import "../css/main.css";
 
 import PortfolioHelmet from "../PortfolioHelmet/PortfolioHemlmet";
 import Header from "../header-nav/header-nav";

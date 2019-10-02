@@ -1,0 +1,51 @@
+/* ======================================== Global Flex Variables ======================================== */
+.flex-container {
+  list-style: none;
+  display: flex;
+}
+.flex-start {
+  justify-content: flex-start;
+}
+.flex-end {
+  justify-content: flex-end;
+}
+.flex-center {
+  justify-content: center;
+}
+.flex-space-between {
+  justify-content: space-between;
+}
+.flex-space-around {
+  justify-content: space-around;
+}
+.flex-space-evenly {
+  justify-content: space-evenly;
+}
+.flex-direction-column{
+  flex-direction: column;
+}
+.flex-direction-row{
+  flex-direction: row;
+}
+.flex-nowrap{
+  flex-wrap: nowrap;
+}
+/* ======================================== Global Variables ======================================== */
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+/* ======================================== Global Styles ======================================== */
+body{
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+/* ======================================== Content Container ======================================== */
+.content-container{
+  height: 95vh;
+  margin: 1rem;
+}
+
+
