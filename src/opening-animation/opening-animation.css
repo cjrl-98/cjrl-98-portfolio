@@ -1,0 +1,49 @@
+.opening-animation-container{
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.opening-animation-container > img{
+    width: 10rem;
+}
+
+.opening-animation{
+opacity: 0;
+animation-delay: 0.5s;
+animation-duration: 2.5s;
+animation-name: opening;
+-webkit-animation-name: opening;
+}
+
+@keyframes opening{
+    10% {
+        opacity: 0
+    }
+
+    35% {
+        opacity: 1;
+        -webkit-transform: scale3d(0.9, 0.9, 0.9);
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    50%,55% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+      }
+}
+
+
+ 
+
