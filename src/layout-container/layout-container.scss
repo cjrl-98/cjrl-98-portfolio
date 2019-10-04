@@ -1,0 +1,20 @@
+.content-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 80vh;
+	margin: 1rem;
+	opacity: 0;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+}
+@media only screen and (min-width: 426px) {
+	.content-container {
+		height: 95vh;
+		margin: 1rem;
+	}
+}

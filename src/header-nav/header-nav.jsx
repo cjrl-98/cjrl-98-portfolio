@@ -1,5 +1,5 @@
 import React from 'react';
-import './header-nav.css';
+import './header-nav.scss';
 import cjrlLogo from '../images/svg/cjrlLogo.png';
 
 class Header extends React.Component {

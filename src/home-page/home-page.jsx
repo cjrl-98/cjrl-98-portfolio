@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactRotatingText from 'react-rotating-text';
-import './home-page.css';
+import './home-page.scss';
 import '../css/main.css'
 import CnTowerSkyline from '../images/svg/CnTowerSkyline.svg';
+import ExclamationCircleSolid from '../images/svg/exclamation-circle-solid.svg';
 class HomePage extends React.Component {
     render() {
         return (
@@ -19,12 +20,12 @@ class HomePage extends React.Component {
                              </span>
                         </h2>
         <div className="alert-card fade-in">
-            <i className="fas fa-exclamation-circle"></i>
+            <img src={ExclamationCircleSolid} alt="alert icon" className="fa-exclamation-circle"></img>
             <p>Redesigning the site to showcase my Bootcamp journey over at BrainStation !</p>
         </div>
     </div>
     <div className="image-container">
-        <img src={CnTowerSkyline}></img>
+        <img src={CnTowerSkyline} alt="a minimalistic illustration of CN Tower"></img>
     </div>
 </div>
         );

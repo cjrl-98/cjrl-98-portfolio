@@ -1,0 +1,82 @@
+$main-color:  #D4737E;
+
+
+@keyframes blinking-cursor {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.home-container {
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+	.image-container {
+		img {
+			display: none;
+		}
+	}
+}
+.home-text-wrapper {
+	h1 {
+		font-size: 3.4rem;
+		font-weight: 900;
+		letter-spacing: 0.1rem;
+	}
+	h2 {
+		font-size: 1rem;
+		font-weight: 700;
+		letter-spacing: 0.1rem;
+		margin: 0.3rem 0 0 0.2rem;
+		span {
+			color: $main-color;
+		}
+	}
+}
+.alert-card {
+	display: flex;
+	opacity: 0;
+	padding: 0.2rem 0.5rem;
+	border: 0.1rem solid rgba( 212, 115, 126,0.5);
+	border-radius: 5px;
+	align-items: center;
+	margin: 0.5rem 0 0 0;
+	animation-delay: 3s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	p {
+		width: 15rem;
+		font-size: 10px;
+		letter-spacing: 0.1rem;
+		opacity: 0.5;
+		margin: 0 0 0 0.5rem;
+		line-height: 0.9rem;
+	}
+	.fa-exclamation-circle {
+    width: 1rem;
+		color: $main-color;
+	}
+}
+.react-rotating-text-cursor {
+	animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+}
+@media only screen and (min-width: 760px) {
+	.home-container {
+		.image-container {
+			img {
+				display: block;
+				width: 12rem;
+				min-width: 290px;
+				z-index: -5;
+			}
+		}
+	}
+}

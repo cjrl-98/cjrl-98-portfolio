@@ -1,36 +1,12 @@
-/* ======================================== Global Variables ======================================== */
-.left{
-  float: left;
+left {
+	float: left;
 }
-.right{
-  float: right;
+.right {
+	float: right;
 }
-/* ======================================== Global Styles ======================================== */
-body{
-  font-family: 'Lato', sans-serif;
-  box-sizing: border-box;
-}
-/* ======================================== Content Container ======================================== */
-.content-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 80vh;
-  margin: 1rem;
-  opacity: 0;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;  
-  -webkit-animation-fill-mode: forwards; 
-  -moz-animation-fill-mode: forwards;    
-  -o-animation-fill-mode: forwards;      
-  -ms-animation-fill-mode: forwards;   
+body {
+	font-family: 'Lato', sans-serif;
+	box-sizing: border-box;
 }
 
-
-@media only screen and (min-width: 426px) {
-  .content-container{
-    height: 95vh;
-    margin: 1rem;
-  }
-}
 

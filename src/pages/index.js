@@ -2,26 +2,17 @@ import React from "react";
 
 import "../css/reset.css";
 import "../css/main.css";
-import "../css/animations.css";
+import "../css/animations.scss";
 
 
 import PortfolioHelmet from "../PortfolioHelmet/PortfolioHemlmet";
-import BackgroundEffect from "../background-effect/background-effect";
-import OpeningAnimation from "../opening-animation/opening-animation";
-import Header from "../header-nav/header-nav";
-import HomePage from "../home-page/home-page";
-import SocialBar from "../social-bar/social-bar";
+import LayoutContainer from "../layout-container/layout-container";
+
 
 const IndexPage = () => (
   <React.Fragment>
-      <OpeningAnimation/>
-      <BackgroundEffect/>
-    <div className="content-container fade-in">
-      <PortfolioHelmet/>     
-      <Header/>
-      <HomePage/>
-      <SocialBar/>
-    </div>
+      <PortfolioHelmet/> 
+      <LayoutContainer/>
   </React.Fragment>
 );
 

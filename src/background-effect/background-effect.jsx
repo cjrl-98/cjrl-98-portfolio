@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './background-effect.css'
+import './background-effect.scss'
 
 const BackgroundEffect = () => {
         return(
