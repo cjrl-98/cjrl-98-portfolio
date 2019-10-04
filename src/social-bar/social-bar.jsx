@@ -10,14 +10,14 @@ import GitHubIcon from "../images/png/git-hub-icon.png";
 const SocialBar = () => {
     return (
         <div className="social-side-bar">
-          <a href="https://www.linkedin.com/in/christian-lagasca-5a1625186/">
+          <a href="https://www.linkedin.com/in/christian-lagasca-5a1625186/" target="_blank">
             <img src={LinkedInIcon} alt="linkedIN icon"/>
           </a>
-          <a href="https://dribbble.com/cjrl_">
+          <a href="https://dribbble.com/cjrl_" target="_blank">
             <img src={DribbleIcon} alt = "dribbble icon"/>
           </a>
 
-          <a href="https://github.com/cjrl-98">
+          <a href="https://github.com/cjrl-98" target="_blank">
             <img src={GitHubIcon} alt="git hub icon"/>
           </a>
         </div>
