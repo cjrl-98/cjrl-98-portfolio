@@ -25,8 +25,18 @@
 /*card styling*/
 .alert-card{
     display: flex;
+    opacity: 0;
+    padding: 0.2rem 0.5rem;
+    border: 0.1rem solid rgba(	212, 115, 126,0.5);
+    border-radius: 5px;
     align-items: center;
     margin: 0.5rem 0 0 0;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;  
+    -webkit-animation-fill-mode: forwards; 
+    -moz-animation-fill-mode: forwards;    
+    -o-animation-fill-mode: forwards;      
+    -ms-animation-fill-mode: forwards;  
 }
 .alert-card p {
     width: 15rem;

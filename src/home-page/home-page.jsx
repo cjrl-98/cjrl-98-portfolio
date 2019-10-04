@@ -18,10 +18,10 @@ class HomePage extends React.Component {
                         <h2>based in <span> Toronto</span></h2>
                         <h2>who loves 
                             <span>     
-                                <ReactRotatingText items={[' Design', ' Solving problems', ' Collaborative work', ' Curating playlists', ' Concerts']} />
+                                <ReactRotatingText items={[' Art',' Design', ' Solving problems', ' Collaborative work', ' Curating playlists', ' Concerts']} />
                              </span>
                         </h2>
-                        <div className="alert-card">
+                        <div className="alert-card fade-in">
                             <i class="fas fa-exclamation-circle"></i>
                             <p>Redesigning the site to showcase my Bootcamp journey over at BrainStation !</p>
                         </div>
