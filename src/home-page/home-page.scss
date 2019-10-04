@@ -1,6 +1,5 @@
 $main-color:  #D4737E;
 
-
 @keyframes blinking-cursor {
 	0% {
 		opacity: 0;
@@ -46,7 +45,7 @@ $main-color:  #D4737E;
 	border-radius: 5px;
 	align-items: center;
 	margin: 0.5rem 0 0 0;
-	animation-delay: 3s;
+	animation-delay: 3.5s;
 	animation-fill-mode: forwards;
 	-webkit-animation-fill-mode: forwards;
 	-moz-animation-fill-mode: forwards;
