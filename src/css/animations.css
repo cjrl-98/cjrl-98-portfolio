@@ -1,7 +1,8 @@
 .fade-in {
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     -webkit-animation-name: fadein;
     animation-name: fadein;
+    animation-timing-function: ease-in;
   }
 
 @-webkit-keyframes fadein {

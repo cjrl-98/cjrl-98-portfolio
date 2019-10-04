@@ -22,7 +22,7 @@ class HomePage extends React.Component {
                              </span>
                         </h2>
                         <div className="alert-card fade-in">
-                            <i class="fas fa-exclamation-circle"></i>
+                            <i className="fas fa-exclamation-circle"></i>
                             <p>Redesigning the site to showcase my Bootcamp journey over at BrainStation !</p>
                         </div>
                     </div>
