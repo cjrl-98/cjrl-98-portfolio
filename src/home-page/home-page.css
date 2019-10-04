@@ -1,6 +1,10 @@
+/*container styles*/
 .home-container{
+    display: flex;
     margin: 0 auto;
+    align-items: center;
 }
+
 /*font-styling*/
 .home-text-wrapper h1{
     font-size: 3.4rem;
@@ -11,16 +15,14 @@
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
-    margin: 0.2rem 0 0 0.2rem;
+    margin: 0.3rem 0 0 0.2rem;
 }
 .home-text-wrapper h2 span{
     color: #D4737E;
 }
 /*img styling*/
-.home-container img{
-    width: 10rem;
-    min-width: 290px;
-    z-index: -1;
+.home-container .image-container img{
+    display:none;
 }
 /*card styling*/
 .alert-card{
@@ -66,3 +68,12 @@
       opacity: 0;
     }
   }
+
+@media only screen and (min-width: 760px) {
+  .home-container .image-container img{
+    display: block;
+    width: 12rem;
+    min-width: 290px;
+    z-index: -5;
+}
+}
