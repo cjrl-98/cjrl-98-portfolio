@@ -6,7 +6,6 @@ import BackgroundEffect from "../background-effect/background-effect";
 import OpeningAnimation from "../opening-animation/opening-animation";
 import Header from "../header-nav/header-nav";
 import HomePage from "../home-page/home-page";
-import OtterCartProject from "../ottercart-project/ottercart-project";
 import SocialBar from "../social-bar/social-bar";
 
 const LayoutContainer = () => (
