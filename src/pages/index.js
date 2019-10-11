@@ -11,8 +11,8 @@ import LayoutContainer from "../layout-container/layout-container";
 
 const IndexPage = () => (
   <React.Fragment>
-      <PortfolioHelmet/> 
-      <LayoutContainer/>
+        <PortfolioHelmet/> 
+        <LayoutContainer/>
   </React.Fragment>
 );
 

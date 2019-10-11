@@ -13,7 +13,7 @@ class OtterCartProject extends React.Component {
     render(){
         return(
             <React.Fragment>
-                <div className="test-container">
+                <div className="project-container">
                     <div className="title-container">
                         <h1 className ="title-container_text green-text">OtterCart</h1>
                         <ul>
@@ -34,10 +34,12 @@ class OtterCartProject extends React.Component {
                     </div>
                     <div className="project-content-container">
                         <div className="card">
-                            <h2>Inspiration</h2>
-                            <p>
-                            Online shopping has become increasingly popular among the youth. In this day and age, convenience is highly valued. Luckily for us, Amazon Prime has free 2 day shipping - unluckily for us, prime shipping is allowing more carbon emissions to be emitted into our already suffering atmosphere. Our team wanted to make an impact with this consumer behaviour <span className="green-text_medium"> Enter OtterCart</span>
-                            </p>
+                            <div>
+                                <h2>Inspiration</h2>
+                                <p>
+                                Online shopping has become increasingly popular among the youth. In this day and age, convenience is highly valued. Luckily for us, Amazon Prime has free 2 day shipping - unluckily for us, prime shipping is allowing more carbon emissions to be emitted into our already suffering atmosphere. Our team wanted to make an impact with this consumer behaviour <span className="green-text_medium"> Enter OtterCart</span>
+                                </p>
+                            </div>
                             <div>
                                 <img src={otterCartOpeningGraphic} alt="OtterCart Opening Graphic" className="otter-cart-opening-graphic"></img>
                             </div>
