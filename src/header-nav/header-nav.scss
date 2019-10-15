@@ -1,17 +1,8 @@
-header {
-	div {
-		.logo-img-container {
-			min-width: 45px;
-			width: 4vw;
-			max-width: 100px;
-			img {
-				width: 100%;
-			}
-		}
-		div {
-			.fa-bars {
-				display: none;
-			}
-		}
+.header{
+	&__logo{
+		min-width: 45px;
+		width: 4vw;
+		max-width: 100px;
 	}
+
 }

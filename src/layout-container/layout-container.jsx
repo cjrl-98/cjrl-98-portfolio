@@ -7,6 +7,7 @@ import OpeningAnimation from "../opening-animation/opening-animation";
 import Header from "../header-nav/header-nav";
 import HomePage from "../home-page/home-page";
 import SocialBar from "../social-bar/social-bar";
+import OtterCartProject from "../ottercart-project/ottercart-project";
 
 const LayoutContainer = () => (
     <React.Fragment>

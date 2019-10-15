@@ -6,19 +6,13 @@ class Header extends React.Component {
     
     render(){
         return(
-            <header>
-                <div className="flex-container flex-space-between">
-                    <div className="logo-img-container">
-                        <img src={cjrlLogo} alt="Personal Portfolio Logo"/>
-                    </div>
-                    <div>
-                        <i className="fas fa-bars"></i>
-                    </div>
+            <header className="header">
+                <div className="header__wrapper">
+                    <img className="header__logo" src={cjrlLogo} alt="Personal Portfolio Logo"/>
                 </div>
             </header>
         );
     }
-
 }
 
 export default Header;
