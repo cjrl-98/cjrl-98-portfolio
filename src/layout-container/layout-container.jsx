@@ -7,16 +7,19 @@ import OpeningAnimation from "../opening-animation/opening-animation";
 import Header from "../header-nav/header-nav";
 import HomePage from "../home-page/home-page";
 import SocialBar from "../social-bar/social-bar";
-import OtterCartProject from "../ottercart-project/ottercart-project";
 
 const LayoutContainer = () => (
     <React.Fragment>
-        <OpeningAnimation/>
+        <OpeningAnimation/> 
         <BackgroundEffect/>
-      <div className="content-container fade-in">    
+      <div className="content-container fade-in">   
         <Header/>
         <HomePage/>
-        <SocialBar/>
+        <SocialBar 
+        linkedin='https://www.linkedin.com/in/christian-lagasca-5a1625186/'
+        dribbble='https://dribbble.com/cjrl_'
+        github='https://github.com/cjrl-98'
+        />
       </div>
     </React.Fragment>
   );

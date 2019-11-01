@@ -10,7 +10,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Helmet from 'react-helmet'
 import "./layout.css"
+
+import personalLogo from '../images/svg/cjrlLogo.png'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
