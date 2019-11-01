@@ -8,19 +8,25 @@ import Header from "../header-nav/header-nav";
 import HomePage from "../home-page/home-page";
 import SocialBar from "../social-bar/social-bar";
 
+
 const LayoutContainer = () => (
-    <React.Fragment>
-        <OpeningAnimation/> 
-        <BackgroundEffect/>
-      <div className="content-container fade-in">   
-        <Header/>
-        <HomePage/>
-        <SocialBar 
-        linkedin='https://www.linkedin.com/in/christian-lagasca-5a1625186/'
-        dribbble='https://dribbble.com/cjrl_'
-        github='https://github.com/cjrl-98'
-        />
-      </div>
+    <React.Fragment>  
+          <OpeningAnimation/>
+          <BackgroundEffect/>
+        <div className="content-container fade-in">    
+          <Header/>
+          <HomePage 
+            shortName = "Amy" 
+            role = "Software Developer"
+            location = "Toronto"
+            interest = {['Art', 'Minimalism', 'Testing']}
+          />  
+          <SocialBar 
+                    linkedin='https://www.linkedin.com/in/christian-lagasca-5a1625186/'
+                    dribbble='https://dribbble.com/cjrl_'
+                    github='https://github.com/cjrl-98'
+          />  
+        </div>
     </React.Fragment>
   );
 
