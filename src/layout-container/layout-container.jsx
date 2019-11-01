@@ -16,10 +16,10 @@ const LayoutContainer = () => (
         <div className="content-container fade-in">    
           <Header/>
           <HomePage 
-            shortName = "Amy" 
+            shortName = "Chris" 
             role = "Software Developer"
             location = "Toronto"
-            interest = {['Art', 'Minimalism', 'Testing']}
+            interest = {['Art','Design','Minimalism', 'Solving problems', 'Collaborative work', 'Curating playlists', 'Concerts']}
           />  
           <SocialBar 
                     linkedin='https://www.linkedin.com/in/christian-lagasca-5a1625186/'
