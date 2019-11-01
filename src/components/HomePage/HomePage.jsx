@@ -1,10 +1,8 @@
 import React from 'react';
-import SocialBar from '../social-bar/social-bar';
 import ReactRotatingText from 'react-rotating-text';
-import './home-page.scss';
-import '../css/main.css'
-import CnTowerSkyline from '../images/svg/CnTowerSkyline.svg';
-import ExclamationCircleSolid from '../images/svg/exclamation-circle-solid.svg';
+import AlertCard from '../AlertCard/AlertCard';
+import './HomePage.scss';
+import CnTowerSkyline from '../../images/svg/CnTowerSkyline.svg';
 class HomePage extends React.Component {
      render() {
         return (
@@ -20,10 +18,7 @@ class HomePage extends React.Component {
                         <ReactRotatingText items={this.props.interest}/>
                     </span>
                     </h2>
-                    <div className="alert-card fade-in">
-                        <img src={ExclamationCircleSolid} alt="alert icon" className="fa-exclamation-circle"></img>
-                        <p className="alert-card__text">Redesigning the site to showcase my Bootcamp journey over at BrainStation !</p>
-                    </div>
+                    <AlertCard alertMsg="Redesigning the site to showcase my Bootcamp journey over at BrainStation !"/>
                 </div>
                 <div className="home__img-container">
                     <img className= "home__img" src={CnTowerSkyline} alt="a minimalistic illustration of CN Tower"></img>

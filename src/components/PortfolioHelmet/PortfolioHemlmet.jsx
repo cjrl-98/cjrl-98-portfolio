@@ -1,8 +1,6 @@
 import React from 'react';
 import {Helmet} from 'react-helmet';
 
-import cjrlLogo from '../images/svg/cjrlLogo.png';
-
 class PortfolioHelmet extends React.Component {
     render(){
         return(

@@ -1,12 +1,12 @@
 import React from "react";
 
-import "./layout-container.scss";
+import "./LayoutContainer.scss";
 
-import BackgroundEffect from "../background-effect/background-effect";
-import OpeningAnimation from "../opening-animation/opening-animation";
-import Header from "../header-nav/header-nav";
-import HomePage from "../home-page/home-page";
-import SocialBar from "../social-bar/social-bar";
+import BackgroundEffect from "../BackgroundEffect/BackgroundEffect";
+import OpeningAnimation from "../OpeningAnimation/OpeningAnimation";
+import Header from "../Header/Header";
+import HomePage from "../HomePage/HomePage";
+import SocialBar from "../SocialBar/SocialBar";
 
 
 const LayoutContainer = () => (

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './opening-animation.css';
+import './OpeningAnimation.css';
 
-import cjrlLogo from '../images/svg/cjrlLogo.png';
+import cjrlLogo from '../../images/svg/cjrlLogo.png';
 
 const OpeningAnimation = () => {
     return(

@@ -1,10 +1,10 @@
 import React from "react";
 
-import "./social-bar.scss";
+import "./SocialBar.scss";
 
-import DribbleIcon from "../images/svg/dribbble-ball-icon.svg";
-import LinkedInIcon from "../images/svg/linkedin-icon.svg";
-import GitHubIcon from "../images/svg/git-hub-icon.svg";
+import DribbleIcon from "../../images/svg/dribbble-ball-icon.svg";
+import LinkedInIcon from "../../images/svg/linkedin-icon.svg";
+import GitHubIcon from "../../images/svg/git-hub-icon.svg";
 
 // props needed  :
 //   profile links
