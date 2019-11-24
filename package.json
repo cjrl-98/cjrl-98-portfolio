@@ -8,6 +8,7 @@
     "@fullpage/react-fullpage": "^0.1.16",
     "gatsby": "^2.18.2",
     "gatsby-image": "^2.2.33",
+    "gatsby-plugin-google-analytics": "^2.1.28",
     "gatsby-plugin-manifest": "^2.2.29",
     "gatsby-plugin-offline": "^3.0.22",
     "gatsby-plugin-react-helmet": "^3.1.15",
@@ -19,7 +20,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-ga": "^2.7.0",
     "react-helmet": "^5.2.1",
     "react-rotating-text": "^1.4.1"
   },

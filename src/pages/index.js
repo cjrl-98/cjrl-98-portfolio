@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactGA from 'react-ga';
 
 import "../css/reset.css";
 import "../css/main.css";
@@ -11,9 +10,6 @@ import LayoutContainer from "../components/LayoutContainer/LayoutContainer";
 import BackgroundEffect from '../components/BackgroundEffect/BackgroundEffect';
 import SocialBar from "../components/SocialBar/SocialBar";
 import Header from "../components/Header/Header";
-
-ReactGA.initialize('UA-149404810-1');
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 const IndexPage = () => (
   <React.Fragment>
