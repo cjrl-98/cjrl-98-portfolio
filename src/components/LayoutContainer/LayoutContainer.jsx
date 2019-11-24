@@ -3,16 +3,6 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import "./LayoutContainer.scss";
 import HomePage from "../HomePage/HomePage";
 import OtterCart from '../OtterCart/OtterCart';
-import BackgroundEffect from '../BackgroundEffect/BackgroundEffect';
-
-const fullpageProps = {
-  scrollingSpeed : 1000,
-  loopTop : true,
-  loopBottom : true,
-  dragAndMove :true,
-  navigation : true,
-  navigationPosition : 'right'
-}
 
 const homepage = <HomePage 
   shortName = "Chris" 
@@ -21,25 +11,62 @@ const homepage = <HomePage
   interest = {['Art','Design','Minimalism', 'Solving problems', 'Collaborative work', 'Curating playlists', 'Concerts']}
   /> 
 
-const LayoutContainer = () => (
-  <ReactFullpage  {...fullpageProps}   licenseKey={null}
-    render={({ state, fullpageApi }) => {
-      return (
-        <ReactFullpage.Wrapper>
-          <div className="section">
-            <section className="content-container">
-              {homepage}
-            </section>
-          </div>
-          <div className="section">
-            <section className="content-container">
-              <OtterCart/>
-            </section>
-          </div>
-        </ReactFullpage.Wrapper>
-      );
-    }}
-  />
-);
+export default class LayoutContainer extends React.Component {
 
-  export default LayoutContainer;
+  state = {
+    isOtterCart : false
+  }
+
+  fullpageProps = {
+    scrollingSpeed : 1000,
+    loopTop : true,
+    loopBottom : true,
+    dragAndMove :true,
+    navigation : true,
+    navigationPosition : 'right'
+    }
+
+  handleOtterCart = () => {
+    this.setState({
+      isOtterCart : !this.state.isOtterCart
+    })
+  }
+
+  onLeave = (origin, destination, direction) => {
+    console.log("Leaving section " + origin.index);
+    if(origin.index === 1){
+      this.setState({isOtterCart : false})
+    }
+  }
+  afterLoad = (origin, destination, direction) => {
+    console.log("After load: " + destination.index);
+    if(destination.index === 1){
+      this.setState({isOtterCart : true})
+    }
+  }
+
+  render(){
+    return(
+      <ReactFullpage  {...this.fullpageProps}   licenseKey={null} 
+      onLeave={this.onLeave}
+      afterLoad={this.afterLoad}
+        render={({ state, fullpageApi }) => {
+          return (
+            <ReactFullpage.Wrapper>
+              <div className="section">
+                <section className="content-container">
+                  {homepage}
+                </section>
+              </div>
+              <div className="section">
+                <section className="content-container">
+                  <OtterCart isOtterCart={this.state.isOtterCart}/>
+                </section>
+              </div>
+            </ReactFullpage.Wrapper>
+          );
+        }}
+       />
+    );
+  }
+} 
