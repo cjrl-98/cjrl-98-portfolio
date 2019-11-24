@@ -1,18 +1,36 @@
 import React from 'react';
-
-
+import ReactGA from 'react-ga';
 
 import "../css/reset.css";
 import "../css/main.css";
 import "../css/animations.scss";
+import "../scss/index.scss"
 
 import PortfolioHelmet from "../components/PortfolioHelmet/PortfolioHemlmet";
 import LayoutContainer from "../components/LayoutContainer/LayoutContainer";
+import BackgroundEffect from '../components/BackgroundEffect/BackgroundEffect';
+import SocialBar from "../components/SocialBar/SocialBar";
+import Header from "../components/Header/Header";
+
+ReactGA.initialize('UA-149404810-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const IndexPage = () => (
   <React.Fragment>
-        <PortfolioHelmet/> 
-        <LayoutContainer/>
+    <Header/>
+    <PortfolioHelmet/> 
+    <div className="background-container"> 
+      <BackgroundEffect/>
+      <BackgroundEffect/>
+    </div>
+    <LayoutContainer/>
+    <footer className="footer">
+      <SocialBar 
+                linkedin='https://www.linkedin.com/in/christian-lagasca-5a1625186/'
+                dribbble='https://dribbble.com/cjrl_'
+                github='https://github.com/cjrl-98'
+      />    
+    </footer>
   </React.Fragment>
 );
 

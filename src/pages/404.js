@@ -1,14 +1,17 @@
-import React from "react"
+import React from 'react';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import "../css/reset.css";
+import "../css/main.css";
+import "../css/animations.scss";
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+import PortfolioHelmet from "../components/PortfolioHelmet/PortfolioHemlmet";
+import LayoutContainer from "../components/LayoutContainer/LayoutContainer";
 
-export default NotFoundPage
+const IndexPage = () => (
+  <React.Fragment>
+        <PortfolioHelmet/> 
+        <LayoutContainer/>
+  </React.Fragment>
+);
+
+export default IndexPage;

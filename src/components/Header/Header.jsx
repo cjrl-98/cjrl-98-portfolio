@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'gatsby';
 import './Header.scss';
 import cjrlLogo from '../../images/svg/cjrlLogo.png';
 
