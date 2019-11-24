@@ -18,7 +18,7 @@ export default class LayoutContainer extends React.Component {
   }
 
   fullpageProps = {
-    scrollingSpeed : 1000,
+    scrollingSpeed : 600,
     loopTop : true,
     loopBottom : true,
     dragAndMove :true,
