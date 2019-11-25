@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import ReactFullpage from '@fullpage/react-fullpage';
 import "./LayoutContainer.scss";
 import HomePage from "../HomePage/HomePage";
@@ -23,7 +23,8 @@ export default class LayoutContainer extends React.Component {
     loopBottom : true,
     dragAndMove :true,
     navigation : true,
-    navigationPosition : 'right'
+    navigationPosition : 'right',
+    lazyLoading: false
     }
 
   handleOtterCart = () => {

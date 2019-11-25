@@ -33,34 +33,6 @@ $main-color:  #D4737E;
 			}
 		}
 	}
-
-.alert-card {
-	display: flex;
-	opacity: 0;
-	padding: 0.2rem 0.5rem;
-	border: 0.1rem solid rgba( 212, 115, 126,0.5);
-	border-radius: 5px;
-	align-items: center;
-	margin: 0.5rem 0 0 0;
-	animation-delay: 3.5s;
-	animation-fill-mode: forwards;
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation-fill-mode: forwards;
-	-o-animation-fill-mode: forwards;
-	-ms-animation-fill-mode: forwards;
-	&__text {
-		width: 15rem;
-		font-size: 10px;
-		letter-spacing: 0.1rem;
-		opacity: 0.5;
-		margin: 0 0 0 0.5rem;
-		line-height: 0.9rem;
-	}
-	.fa-exclamation-circle {
-   		width: 1rem;
-		color: $main-color;
-	}
-}
 .react-rotating-text-cursor {
 	animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
 }

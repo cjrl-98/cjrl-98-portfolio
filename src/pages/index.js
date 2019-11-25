@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 import "../css/reset.css";
 import "../css/main.css";
@@ -19,7 +20,9 @@ const IndexPage = () => (
       <BackgroundEffect/>
       <BackgroundEffect/>
     </div>
-    <LayoutContainer/>
+    <motion.div initial={{opacity: 0, scale: 0}} animate={{opacity: 1, scale: 1}} transition={{ type: "spring", stiffness: 100, delay: 1.5 }}>
+      <LayoutContainer/>
+    </motion.div>
     <footer className="footer">
       <SocialBar 
                 linkedin='https://www.linkedin.com/in/christian-lagasca-5a1625186/'
