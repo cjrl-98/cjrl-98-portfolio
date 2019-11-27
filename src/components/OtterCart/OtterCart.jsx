@@ -29,7 +29,7 @@ export default class OtterCart extends React.Component{
             <React.Fragment>
                 <motion.section variants={this.otterCart} animate={this.props.isOtterCart ? "open" : "closed"} className="ottercart" >
                     <motion.h1 className="ottercart__title">OtterCart</motion.h1>
-                    <motion.p className="ottercart__description">Otter Cart is a simple Google Chrome extension that alerts you about how much carbon is being emitted from shipping your item from the closest Amazon distribution centre to you along with the number of trees you’ve saved with your purchase.</motion.p>
+                    <motion.p className="ottercart__description">Otter Cart is a simple Google Chrome extension that alerts you about how much carbon is being emitted from shipping your item from the closest Amazon distribution centre to you along with the number of trees you’ve saved with your purchase and then provide options to lower the total carbon and environmental impact of your order.</motion.p>
                     <motion.button variants={this.circleObject} className="ottercart__btn">Coming Soon</motion.button>
                     <motion.div transition={spring} variants={this.circleObject} lassName="ottercart__circle ottercart__circle--1"></motion.div>
                     <motion.div transition={spring} variants={this.circleObject} className="ottercart__circle ottercart__circle--2"></motion.div>
