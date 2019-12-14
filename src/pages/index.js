@@ -1,9 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import "../css/reset.css";
 import "../css/main.css";
-import "../css/animations.scss";
 import "../scss/index.scss"
 
 import PortfolioHelmet from "../components/PortfolioHelmet/PortfolioHemlmet";

@@ -1,16 +1,8 @@
 import React from "react";
-
 import "./SocialBar.scss";
-
 import DribbleIcon from "../../images/svg/dribbble-ball-icon.svg";
 import LinkedInIcon from "../../images/svg/linkedin-icon.svg";
 import GitHubIcon from "../../images/svg/git-hub-icon.svg";
-
-// props needed  :
-//   profile links
-//     github:
-//     linkedin:
-//     github:
 
 class SocialBar extends React.Component{
   render(){

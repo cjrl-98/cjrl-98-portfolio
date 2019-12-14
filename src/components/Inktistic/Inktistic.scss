@@ -1,0 +1,165 @@
+@import "../../css//mixin.scss";
+
+.inktistic{
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #323232;
+}
+
+.inktistic__title{
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    line-height: 1.21;
+    letter-spacing: 0.53px;
+    text-align: left;
+    @include tablet(){
+        font-size: 96px;
+        letter-spacing: 1.06px;
+    }
+}
+
+.inktistic__description{
+    width: 250px;
+    opacity: 0.5;
+    font-size: 11px;
+    font-weight: 500;
+    font-stretch: normal;
+    line-height: 2.7;
+    letter-spacing: 0.09px;
+    margin-bottom: 16px;
+    @include tablet(){
+        width: 532px;
+        font-size: 14px;
+        line-height: 2.29;
+    }
+}
+
+.inktistic__btn {
+    display: flex;
+    justify-content: center;
+    width: 91px;
+    border: none;
+    border-radius: 25px;
+    background-color: #62bd9d;
+    font-size: 8px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fafafa;
+    @include tablet(){
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        font-size: 16px;
+        padding: 8px 32px;
+    }
+}
+
+.inktistic__circle--1{
+    position: absolute;
+    top: -100px;
+    right: 110px;
+    width: 90px;
+    height: 90px;
+    border-bottom: solid 30px #1d1d1d;
+    border-left: solid 30px #1d1d1d;
+    border-right: solid 30px transparent;
+    border-top: solid 30px transparent;
+}
+.inktistic__circle--2{
+    position: absolute;
+    bottom: -95px;    
+    right: -170px;
+    width: 90px;
+    height: 90px;
+    border-bottom: solid 30px #1d1d1d;
+    border-right: solid 30px #1d1d1d;
+    border-left: solid 30px transparent;
+    border-top: solid 30px transparent;
+}
+.inktistic__circle--3{
+    position: absolute;
+    bottom: -150px;    
+    left: 0px;
+    width: 90px;
+    height: 90px;
+    border-bottom: solid 30px #1d1d1d;
+    border-left: solid 30px #1d1d1d;
+    border-right: solid 30px transparent;
+    border-top: solid 30px transparent;
+}
+.inktistic__circle--4{
+    position: absolute;
+    top: -220px;    
+    left: 0px;
+    width: 90px;
+    height: 90px;
+    border-bottom: solid 30px #1d1d1d;
+    border-right: solid 30px #1d1d1d;
+    border-left: solid 30px transparent;
+    border-top: solid 30px transparent;
+}
+.inktistic__circle--5{
+    position: absolute;
+    top: -40px;    
+    left: -140px;
+    width: 90px;
+    height: 90px;
+    border-bottom: solid 30px #1d1d1d;
+    border-left: solid 30px #1d1d1d;
+    border-right: solid 30px transparent;
+    border-top: solid 30px transparent;
+}
+.inktistic__circle--6{
+    position: absolute;
+    top: 40px;    
+    right: -290px;
+    width: 90px;
+    height: 90px;
+    border-bottom: solid 30px #1d1d1d;
+    border-right: solid 30px #1d1d1d;
+    border-left: solid 30px transparent;
+    border-top: solid 30px transparent;
+}
+.inktistic__circle--7{
+    position: absolute;
+    top: -265px;    
+    right: -440px;
+    width: 90px;
+    height: 90px;
+    border-bottom: solid 30px #1d1d1d;
+    border-left: solid 30px #1d1d1d;
+    border-right: solid 30px transparent;
+    border-top: solid 30px transparent;
+}
+.inktistic__circle--8{
+    position: absolute;
+    top: -200px;    
+    left: -380px;
+    width: 90px;
+    height: 90px;
+    border-bottom: solid 30px #1d1d1d;
+    border-left: solid 30px #1d1d1d;
+    border-right: solid 30px transparent;
+    border-top: solid 30px transparent;
+}
+.inktistic__circle--9{
+    position: absolute;
+    top: 130px;    
+    left: -340px;
+    width: 80px;
+    height: 80px;
+    border-bottom: solid 30px #1d1d1d;
+    border-right: solid 30px #1d1d1d;
+    border-left: solid 30px transparent;
+    border-top: solid 30px transparent;
+}
