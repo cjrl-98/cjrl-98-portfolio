@@ -24,7 +24,6 @@ export default class OtterCart extends React.Component{
         }
       };
     render(){
-        console.log(this.props.isOtterCart)
         return(
             <React.Fragment>
                 <motion.section variants={this.otterCart} animate={this.props.isOtterCart ? "open" : "closed"} className="ottercart" >

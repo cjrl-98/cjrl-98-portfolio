@@ -23,7 +23,8 @@ export default function LayoutContainer () {
     dragAndMove :true,
     navigation : true,
     navigationPosition : 'right',
-    lazyLoading: true
+    lazyLoading: true,
+    sectionsColor:['transparent', '#000000', 'transparent']
     }
 
   const onLeave = (origin, destination, direction) => {
