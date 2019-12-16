@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, Suspense, lazy } from "react";
 import ReactFullpage from '@fullpage/react-fullpage';
 import "./LayoutContainer.scss";
 import HomePage from "../HomePage/HomePage";
-import OtterCart from '../OtterCart/OtterCart';
-import Inktistic from '../Inktistic/Inktistic';
+const OtterCart = lazy(()=> import('../OtterCart/OtterCart'));
+const Inktistic = lazy(()=>import('../Inktistic/Inktistic'));
 
 const homepage = <HomePage 
   shortName = "Chris" 
@@ -46,30 +46,32 @@ export default function LayoutContainer () {
   }
 
     return(
-      <ReactFullpage  {...fullpageProps}   licenseKey={null} 
-      onLeave={onLeave}
-      afterLoad={afterLoad}
-        render={({ state, fullpageApi }) => {
-          return (
-            <ReactFullpage.Wrapper>
-              <div className="section">
-                <section className="content-container">
-                  {homepage}
-                </section>
-              </div>
-              <div className="section">
-                <section className="content-container">
-                  <Inktistic isInktistic={isInktistic}/>
-                </section>
-              </div>
-              <div className="section">
-                <section className="content-container">
-                  <OtterCart isOtterCart={isOtterCart}/>
-                </section>
-              </div>
-            </ReactFullpage.Wrapper>
-          );
-        }}
-       />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ReactFullpage  {...fullpageProps}   licenseKey={null} 
+        onLeave={onLeave}
+        afterLoad={afterLoad}
+          render={({ state, fullpageApi }) => {
+            return (
+              <ReactFullpage.Wrapper>
+                <div className="section">
+                  <section className="content-container">
+                    {homepage}
+                  </section>
+                </div>
+                <div className="section">
+                  <section className="content-container">
+                    <Inktistic isInktistic={isInktistic}/>
+                  </section>
+                </div>
+                <div className="section">
+                  <section className="content-container">
+                    <OtterCart isOtterCart={isOtterCart}/>
+                  </section>
+                </div>
+              </ReactFullpage.Wrapper>
+            );
+          }}
+        />
+      </Suspense>
     );
 } 
