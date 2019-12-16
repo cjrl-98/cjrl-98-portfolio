@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Software Developer - Christian Lagasca`,
     description: `Personal Portfolio`,
-    author: `@cjrl_`,
+    author: `cjrl_`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

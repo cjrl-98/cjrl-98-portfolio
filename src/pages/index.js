@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import "../css/main.css";
-import "../scss/index.scss"
 
 import PortfolioHelmet from "../components/PortfolioHelmet/PortfolioHemlmet";
 import LayoutContainer from "../components/LayoutContainer/LayoutContainer";
