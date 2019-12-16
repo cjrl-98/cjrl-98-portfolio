@@ -46,7 +46,7 @@ export default function Inktistic(props) {
                   >
                     go back
                   </label>
-                  <a href="https://www.inktistic.ca/" target="_blank">
+                  <a href="https://www.inktistic.ca/" target="_blank" rel="noopener noreferrer">
                     <label
                       className="inktistic__button inktistic__button--return"
                       aria-hidden="true"
