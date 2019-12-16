@@ -59,3 +59,65 @@ table {
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
     background: #D4737E !important;
 }
+
+$color-main: #D4737E;
+$black: #202020;
+.entrance-animate {
+  position: relative;
+  &.entrance-animation__in {
+      animation: textHidden 0.1s 1.1s forwards;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      z-index: 10;
+    }
+    &:before {
+      background-color: $color-main;
+    }
+    &:after {
+      background-color: $black;
+      animation-delay: .5s;
+    }
+  }
+  &.entrance-animation__leftTOright.entrance-animation__in {
+    &:before {
+      animation: revealLTR 1.8s 2s ease;
+    }
+    &:after {
+      animation: revealLTR 1s 2.6s ease;
+    }
+  }
+}
+
+@keyframes revealRTL {
+  0%{
+    width: 0;
+    right: 0;
+  }
+  65%{
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    right: 100%;
+  }
+}
+
+@keyframes revealLTR {
+  0%{
+    width: 0;
+    left: 0;
+  }
+  65%{
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
