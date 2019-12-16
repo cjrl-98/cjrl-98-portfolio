@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-149404810-1",
+        trackingId: process.env.GOOGLE_TRACKING_ID,
         head: false,
         anonymize: true,
       },
@@ -36,8 +36,5 @@ module.exports = {
         icon: `src/images/svg/cjrlLogo.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
