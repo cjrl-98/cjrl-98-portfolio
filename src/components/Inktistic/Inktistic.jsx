@@ -13,7 +13,7 @@ export default function Inktistic(props) {
               <div className="inktistic__inner">
                 <h2 className="inktistic__title--neon">Inktistic</h2>
                 <div className="inktistic-short__description">
-                  The only social media platform you will ever need for your Tattoo needs.
+                  The only social media platform you will ever need for all your Tattoo needs from browsing to scheduling your favourite artists.
                 </div>
                 <label htmlFor="inktistic-card" className="inktistic__button" aria-hidden="true">
                   read more

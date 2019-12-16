@@ -9,7 +9,7 @@ $accent-color: #000000;
 	&__card {
 		position: relative;
 		width: 290px;
-		height: 360px;
+		height: 370px;
 		margin: 1em;
 		perspective: 1500px;
 		@include tablet() {
@@ -49,13 +49,15 @@ $accent-color: #000000;
 		}
 	}
 	&__button {
+		margin: 0 auto;
+		width: fit-content;
 		font-size: 8px;
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		font-weight: 600;
 		cursor: pointer;
 		padding: 4px 16px;
-		line-height: 2.9em;
+		line-height: 3em;
 		background-color: transparent;
 		border: solid 2px #fff;
 		color: #fff;
