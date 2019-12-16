@@ -23,7 +23,7 @@ export default function LayoutContainer () {
     dragAndMove :true,
     navigation : true,
     navigationPosition : 'right',
-    lazyLoading: true,
+    lazyLoading: false,
     sectionsColor:['transparent', '#000000', 'transparent']
     }
 

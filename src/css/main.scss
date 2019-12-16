@@ -60,9 +60,8 @@ table {
     background: #D4737E !important;
 }
 
-$color-main: #D4737E;
-$black: #202020;
 .entrance-animate {
+  z-index: 1500;
   position: relative;
   &.entrance-animation__in {
       animation: textHidden 0.1s 1.1s forwards;
@@ -75,10 +74,10 @@ $black: #202020;
       z-index: 10;
     }
     &:before {
-      background-color: $color-main;
+      background-color: #D4737E;
     }
     &:after {
-      background-color: $black;
+      background-color: #000000;
       animation-delay: .5s;
     }
   }

@@ -9,22 +9,16 @@ import LayoutContainer from "../LayoutContainer/LayoutContainer";
 import BackgroundEffect from '../BackgroundEffect/BackgroundEffect';
 import SocialBar from "../SocialBar/SocialBar";
 import Header from "../Header/Header";
-import Logo from "../../images/svg/cjrlLogo.png";
 
 const LandingPage = () => (
-  <React.Fragment>
+  <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{ type: "spring", stiffness: 100, delay: 2.5 }}>
     <Header/>
     <PortfolioHelmet/> 
     <div className="background-container"> 
       <BackgroundEffect/>
       <BackgroundEffect/>
     </div>
-    <motion.div initial={{opacity: 1}} animate={{opacity: 0}} transition={{ type: "spring", stiffness: 100, delay: 2.5 }}>
-        <div className="landing-page__logo-container">
-            <img src={Logo}/>
-        </div>
-    </motion.div>
-    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{ type: "spring", stiffness: 100, delay: 2.5 }}>
+    <motion.div>
       <LayoutContainer/>
     </motion.div>
     <footer className="footer">
@@ -34,7 +28,7 @@ const LandingPage = () => (
                 github='https://github.com/cjrl-98'
       />    
     </footer>
-  </React.Fragment>
+  </motion.div>
 );
 
 export default LandingPage;
