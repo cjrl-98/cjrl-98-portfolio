@@ -1,49 +1,18 @@
 {
-  "name": "personal-portfoli-cjrl98",
-  "private": true,
-  "description": "Personal Portfolio Website - Christian Lagasca",
+  "name": "cjrl98-portfolio-site",
   "version": "0.1.0",
-  "author": "Christian Lagasca",
-  "dependencies": {
-    "@fullpage/react-fullpage": "^0.1.16",
-    "framer-motion": "^1.6.17",
-    "gatsby": "^2.18.11",
-    "gatsby-image": "^2.2.33",
-    "gatsby-plugin-google-analytics": "^2.1.28",
-    "gatsby-plugin-manifest": "^2.2.29",
-    "gatsby-plugin-offline": "^3.0.22",
-    "gatsby-plugin-react-helmet": "^3.1.15",
-    "gatsby-plugin-sass": "^2.1.23",
-    "gatsby-plugin-sharp": "^2.3.2",
-    "gatsby-source-filesystem": "^2.1.38",
-    "gatsby-transformer-sharp": "^2.3.5",
-    "node-sass": "^4.13.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "react-rotating-text": "^1.4.1"
-  },
-  "devDependencies": {
-    "prettier": "^1.19.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
+  "private": true,
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.17",
+    "gsap": "^3.0.4",
+    "next": "9.1.7",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-rotating-text": "^1.4.1"
   }
 }
