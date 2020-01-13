@@ -28,7 +28,7 @@ export const ResetStyles = () => {
                }
                body {
                     line-height: 1;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'Poppins', sans-serif;
                }
                a{
                     text-decoration: none;

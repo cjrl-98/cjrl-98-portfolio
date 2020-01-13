@@ -17,7 +17,7 @@ export default function index(){
               <meta property="og:site_name" content="Christian Lagasca"/>
               <meta name="theme-color" content={"#D4737E"}/>
               <meta httpEquiv="cache-control" content="cache"/>
-              <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap" rel="stylesheet"></link>
+              <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900&display=swap" rel="stylesheet"/>
         </Head>
         <LandingLayout/>
         <ResetStyles/>

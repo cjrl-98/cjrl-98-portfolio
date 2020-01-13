@@ -1,72 +1,65 @@
-import { useState, useEffect, useRef } from 'react';
-import { TimelineMax } from 'gsap';
+import { motion, useCycle } from "framer-motion";
 
-export default function EntranceAnimation () {
-     const [destroy, setDestroy] = useState(false)
-     const navBox1 = useRef(null);
-     const navBox2 = useRef(null);
-     const navBox3 = useRef(null);
-     const navBox4 = useRef(null);
-     const logo = useRef(null);
-
-     const timeline = new TimelineMax({paused: false, onComplete: () => setDestroy(true) })
-
-     useEffect(()=>{
-          timeline.from(logo.current, { opacity: 0 })
-               .to(logo.current, { opacity: 1 })
-               .to(logo.current, { opacity: 0})
-               .fromTo(
-                    [navBox1.current, navBox2.current, navBox3.current, navBox4.current], 1.5,
-                    {    
-                         y: "0vh"
-                    },
-                    { 
-                         stagger: 0.1,
-                         ease: "power4.inOut",
-                         y: "100vh"
-                    }
-               );
-     },[])
-     return(
-          <>   
-               {destroy ? null : 
-                    <div className="nav__container">
-                         <img ref={logo} className="nav__logo" src="/cjrlLogo.png" alt="cjrl strawberry logo"/>
-                         <div ref={navBox1} className="nav__box nav__box--1"/>
-                         <div ref={navBox2} className="nav__box nav__box--2"/>
-                         <div ref={navBox3} className="nav__box nav__box--3"/>
-                         <div ref={navBox4} className="nav__box nav__box--4"/>
-                    </div>
+const parentVariant = {
+     open: {
+          transition: {
+               delayChildren: 3.2,
+               staggerChildren: 0.1
+          },
+     }
+}
+const variants = {
+     navbox : {
+          open : {
+               y: '100vh',
+               transition: {
+                    y: {duration: 1, ease: [.83,.01,.02,1]}
                }
-               <style jsx>{`
-                    .nav__container{
-                         z-index: 100;
-                         position: fixed;
-                         display: flex;
-                         justify-content: center;
-                         align-items: center;
-                         width: 100vw;
-                         height: 85vh;
+          }
+     }
+}
+export default function EntranceAnimation () {
+     const [destroy, setDestroy] = useCycle(false, true)
+     return(
+          <>
+               {    destroy ? null :  
+                         <motion.div variants={parentVariant}  animate="open" onAnimationComplete={setDestroy} className="nav__container">
+                              <motion.img animate={{opacity: [0, 0, 1, 1, 0]}} transition={{duration: 3, type: "spring"}} className="nav__logo" src="/cjrlLogo.png" alt="cjrl strawberry logo"/>
+                              <motion.div  variants={variants.navbox} className="nav__box nav__box--1"/>
+                              <motion.div  variants={variants.navbox} className="nav__box nav__box--2"/>
+                              <motion.div  variants={variants.navbox} className="nav__box nav__box--3"/>
+                              <motion.div  variants={variants.navbox} className="nav__box nav__box--4"/>
+                              <style jsx>{`
+                                   :global(.nav__container){
+                                        z-index: 1000;
+                                        position: fixed;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 100vw;
+                                        height: 85vh;
+                                   }
+                                   :global(.nav__logo){
+                                        position: fixed;
+                                        height: 70px;
+                                        z-index: 100;
+                                   }
+                                   :global(.nav__box){
+                                        width: 25%;
+                                        height: 100%;
+                                        background-color: #000000;
+                                   }
+                                   @media (min-width: 768px){
+                                        :global(.nav__container){
+                                             height: 100vh;
+                                        }
+                                        :global(.nav__logo){
+                                             height: 100px;
+                                        }
+                                   }
+                              `}</style>
+                         </motion.div>
                     }
-                    .nav__logo{
-                         position: fixed;
-                         height: 70px;
-                         z-index: 100;
-                    }
-                    .nav__box{
-                         width: 25%;
-                         height: 100%;
-                         background-color: #000000;
-                    }
-                    @media (min-width: 768px){
-                         .nav__container{
-                              height: 100vh;
-                         }
-                         .nav__logo{
-                              height: 100px;
-                         }
-                    }
-               `}</style>
           </>
      );
 }
