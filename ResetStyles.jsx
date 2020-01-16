@@ -29,6 +29,7 @@ export const ResetStyles = () => {
                body {
                     line-height: 1;
                     font-family: 'Poppins', sans-serif;
+                    background-color: #000000;
                }
                a{
                     text-decoration: none;

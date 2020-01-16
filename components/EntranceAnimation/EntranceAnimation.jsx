@@ -24,7 +24,7 @@ export default function EntranceAnimation () {
           <>
                {    destroy ? null :  
                          <motion.div variants={parentVariant}  animate="open" onAnimationComplete={setDestroy} className="nav__container">
-                              <motion.img animate={{opacity: [0, 0, 1, 1, 0]}} transition={{duration: 3, type: "spring"}} className="nav__logo" src="/cjrlLogo.png" alt="cjrl strawberry logo"/>
+                              <motion.img initial={{opacity: 0}} animate={{opacity: [0, 0, 1, 1, 0]}} transition={{duration: 3, type: "spring"}} className="nav__logo" src="/cjrlLogo.png" alt="cjrl strawberry logo"/>
                               <motion.div  variants={variants.navbox} className="nav__box nav__box--1"/>
                               <motion.div  variants={variants.navbox} className="nav__box nav__box--2"/>
                               <motion.div  variants={variants.navbox} className="nav__box nav__box--3"/>
@@ -47,7 +47,7 @@ export default function EntranceAnimation () {
                                    :global(.nav__box){
                                         width: 25%;
                                         height: 100%;
-                                        background-color: #000000;
+                                        background-color: #fafafa;
                                    }
                                    @media (min-width: 768px){
                                         :global(.nav__container){

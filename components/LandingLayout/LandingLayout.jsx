@@ -4,6 +4,7 @@ import EntranceAnimation from '../EntranceAnimation/EntranceAnimation';
 import Header from '../Header/Header';
 import SocialBar from '../SocialBar/SocialBar';
 import Home from '../Home/Home';
+import HomeV1 from '../Home/Homev1';
 import ProjectsPage from '../ProjectsPage/ProjectsPage';
 import ComingSoon from './ComingSoon';
 
@@ -26,7 +27,6 @@ const contentTransition = {
      } 
 }
 
-
 export default function LandingLayout () {
      const [content, setContent] = useState('home')
 
@@ -36,7 +36,8 @@ export default function LandingLayout () {
                     <motion.div className="landing-layout" key="home"{...contentTransition}>
                          <Header setContent={setContent} content={content}/>
                          <motion.section className="content__container">
-                              <Home/>
+                              <Home setContent={setContent} content={content}/>
+                              <HomeV1/>
                          </motion.section>
                          <SocialBar/> 
                     </motion.div>
@@ -44,7 +45,7 @@ export default function LandingLayout () {
           if(content === 'projects'){
                return (
                     <motion.div className="landing-layout" key="projects" {...contentTransition}>
-                         <Header setContent={setContent} content={content}/>
+                         <Header isNav={true} setContent={setContent} content={content}/>
                          <motion.section className="content__container">
                               <ProjectsPage/>
                          </motion.section>
@@ -54,7 +55,7 @@ export default function LandingLayout () {
           if(content === 'showreel'){
                return (
                     <motion.div className="landing-layout" key="showreel" {...contentTransition}>
-                         <Header setContent={setContent} content={content}/>
+                         <Header isNav={true} setContent={setContent} content={content}/>
                          <motion.section className="content__container">
                               <ComingSoon/>
                          </motion.section>

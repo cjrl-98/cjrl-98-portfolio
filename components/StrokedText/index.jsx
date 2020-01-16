@@ -1,50 +1,52 @@
 export default function StrokedText(props){
      return(
           <>
-               <p onClick={props.onClick} data-hover={props.text} className={props.content === props.text ? 'nav__item--active' : 'nav__item'}>{props.text}</p>
+               <p onMouseEnter={props.onMouseEnter} onClick={props.onClick} data-hover={props.text} className={props.content === props.text ? `stroked--active ${props.className}` : `stroked ${props.className}`}>{props.text}</p>
                <style jsx>{`
-                    .nav__item {
-                         font-size: 32px;
+                    .stroked {
+                         z-index: 100;
+                         // font-size: 32px;
                          letter-spacing: 1.5px;
                          font-weight: 900;
                          text-decoration: none;
-                         margin-left: 16px;
+                         // margin-left: 16px;
                          color: transparent;
-                         -webkit-text-stroke: 1px #000000; 
+                         -webkit-text-stroke: 1px #FFFFFF; 
                          text-transform: uppercase;
                     }
-                    .nav__item:before {
+                    .stroked:before {
+                         z-index: 10;
                          height: 0;
-                         color: #000000;
+                         color: #FFFFFF;
                          overflow: hidden;
                          position: absolute;
                          content: attr(data-hover);
-                         transition: all 0.3s;
+                         transition: all 0.5s ease-out;
                     }
-                    .nav__item:hover:before {
-                         height: 110%;
+                    .stroked:hover:before {
+                         height: 100%;
                     }
-                    .nav__item--active{
-                         font-size: 32px;
+                    .stroked--active{
+                         // font-size: 32px;
                          letter-spacing: 1.5px;
                          font-weight: 900;
                          border: none;
-                         margin-left: 16px;
+                         // margin-left: 16px;
                          text-transform: uppercase;
                          color: #D4737E;
                     }
                     @media (min-width: 1024px){     
-                         .nav__item {
-                              margin-left: 20px;
+                         .stroked {
+                              // margin-left: 20px;
                          }
                     }
                     @media (min-width: 1920px){     
-                         .nav__item {
-                              font-size: 40px;
+                         .stroked {
+                              // font-size: 40px;
                          }
-                         .nav__item--active{
-                              font-size: 40px;
-                              margin-left: 18px;
+                         .stroked--active{
+                              // font-size: 40px;
+                              // margin-left: 18px;
                               -webkit-text-stroke: 1px #D4737E; 
                          }
                     }

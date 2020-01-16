@@ -1,105 +1,155 @@
-import AlertCard from '../AlertCard/AlertCard';
-import ReactRotatingText from 'react-rotating-text';
+import {useState} from 'react'
+import { motion, AnimatePresence } from 'framer-motion';
+import StrokedText from '../StrokedText';
 
-export default function Home(){
+const picLinks = {
+     home : "https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+     projects : "https://images.unsplash.com/photo-1505238680356-667803448bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+     showreel : "https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1640&q=80",
+     about : "https://images.unsplash.com/photo-1560185803-34becb7acecb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80",
+}
 
-    return (
+const transition = { duration: 0.7, ease: [.26,.75,0,.99] };
+
+export default function Home(props){
+     const [background, setBackground] = useState({
+          pic : picLinks.home,
+          sidebar : "Home"
+     });
+     
+     const backgroundImgVariants = {
+          transition : { duration: 0.3, ease: [.26,.75,0,.99] },
+          key : background.pic,
+          initial : { 
+               opacity : 0,
+               filter : "blur(10px)"
+          },
+          animate : {
+               opacity : 1,
+               filter: "blur(0px)"
+          },
+          exit : { 
+               opacity : 0,
+               filter : "blur(10px)",
+               transition: 
+                    {
+                         duration: 0.5
+                    } 
+               }, 
+          className : "home__background home__background-picture", 
+          src : background.pic,
+          alt : `${background.sidebar} background image`,
+     }
+
+     const backgroundPicture = () => (
+          <AnimatePresence exitBeforeEnter={false}>
+               <motion.img {...backgroundImgVariants}/>
+          </AnimatePresence>
+     )
+
+     return (
         <>
             <div className="home">
-                <div className="home__text-wrapper">
-                    <h1 className="home__h1">Hello.</h1>
-                    <h1 className="home__h1">I'm Chris</h1>
-                    <h2 className="home__h2">a <span>Software Developer</span></h2>
-                    <h2 className="home__h2">based in <span>Toronto</span></h2>
-                    <h2 className="home__h2 home__h2--text">{`who loves `}  
-                    <span className="home__text-rotating">     
-                        <ReactRotatingText items={['Art','Design','Minimalism', 'Solving problems', 'Collaborative work', 'Curating playlists', 'Concerts']}/>
-                    </span>
-                    </h2>
-                    <div className="home__mouse-alert">
-                         <AlertCard alertMsg="Mobile View coming on January 15"/>
-                    </div>
+                <div className="home__text-container">
+                    <StrokedText onMouseEnter={()=> setBackground({pic: picLinks.home, sidebar: "Home"}) } onClick={()=>props.setContent('home')} text="home" className="home__text"/>
+                    <StrokedText onMouseEnter={()=> setBackground({pic: picLinks.projects, sidebar: "Projects"}) } onClick={()=> props.setContent('projects')} text="projects" className="home__text"/>
+                    <StrokedText onMouseEnter={()=> setBackground({pic: picLinks.showreel, sidebar: "Showreel"}) } onClick={()=>props.setContent("showreel")} text="showreel" className="home__text"/>
+                    <StrokedText onMouseEnter={()=> setBackground({pic: picLinks.about, sidebar: "About"}) }text="about" className="home__text"/>
                 </div>
-                <div className="home__img-container">
-                    <img className= "home__img" src="/CnTowerSkyline.svg" alt="a minimalistic illustration of CN Tower"></img>
+                {backgroundPicture()}
+                <div className="home__sidebar">
+                    <motion.p className="home__sidebar-text">{background.sidebar}</motion.p>
                 </div>
             </div>
             <style jsx>{`
                .home {
                     position: relative;
-                    display: flex;
+                    display: none;
                     margin: 0 auto;
                     align-items: center;
                     justify-content: center;
                }
-               .home__img{
-                    transition: ease-in 5s all;
-                    display:none;
+               .home::before{
+                    z-index: -100;
+                    position: fixed;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
                }
-               .home__h1 {
-                    font-size: 3.4rem;
-                    font-weight: 900;
-                    letter-spacing: 0.1rem;
+               .home__text-container{
+                   display: flex;
+                   flex-direction: column;
                }
-               .home__h2 {
-                    font-size: 1rem;
-                    font-weight: 700;
-                    letter-spacing: 0.1rem;
-                    margin: 0.3rem 0 0 0.2rem;   
+
+              :global(.home__text){
+                   font-size: 45px;
+                   text-align: center;
+                   margin-bottom: 48px;
+                   -webkit-text-stroke: 1px #FFFFFF; 
+              }
+              :global(.home__text:nth-last-of-type(1)){
+                    margin-bottom: 0px;
                }
-               .home__h2--text{
-                    width: 320px;
+               :global(.home__background){
+                         position: absolute;
                }
-               .home__text-rotating{
-                    color: #D4737E;
+               :global(.home__background-picture) {
+                    width: 300px;
+                    height: 220px;
+                    filter: blur(10px);  
+                    transition: 0.5s filter linear;
                }
-               .react-rotating-text-cursor {
-                    animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+               :global(.home__background-picture:hover) {
+                    filter: blur(0px); 
                }
-               @keyframes blinking-cursor {
-                    0% {
-                         opacity: 0;
-                    }
-                    50% {
-                         opacity: 1;
-                    }
-                    100% {
-                         opacity: 0;
-                    }
-               }
-               .home__mouse-alert{
-                    position: relative;
+               .home__sidebar{
                     display: flex;
-                    align-items: center;
-                    margin-top: 16px;
+                    align-items:center;
+                    height: 100vh;
                }
-               :global(.home__mouse-icon){
-                    height: 34px;
-                    margin-right: 16px;
+               :global(.home__sidebar-text){
+                    position: fixed;
+                    left: -18px;
+                    font-weight: 900;
+                    writing-mode: vertical-lr;
+                    font-size: 7vw;
+                    background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.1));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;                    
                }
-               :global(.home__mouse-scrollbar){
-                    position: absolute;
-                    top: 4px;
-                    left: 8px;
-                    width: 4px;
-                    height: 8px;
-                    background-color: black;
-                    border-radius: 25px;
-               }
-               .home__mouse-text{
-                    font-size: 14px;
-                    font-weight: 700;
-                    opacity: 0.5
-               }
-               @media only screen and (min-width: 760px) {
-                    .home__img{
-                         display: block;
-                         width: 12rem;
-                         min-width: 290px;
-                         z-index: -5;
+
+              @media(min-width: 758px){
+                    .home{
+                         display: flex;
                     }
+                    :global(.home__text){
+                         font-size: 120px;
+                    }
+              }
+              @media(min-width: 758px){
+                    :global(.home__background-picture) {
+                         width: 700px;
+                         height: 400px;
+                    }
+              }
+              @media(min-width: 1920px){
+               :global(.home__background-picture) {
+                    width: 1300px;
+                    height: 700px;
                }
+               :global(.home__text){
+                    font-size: 200px;
+                    margin-bottom: 72px;
+               }
+         }
             `}</style>
         </>
     );
 }
+
+

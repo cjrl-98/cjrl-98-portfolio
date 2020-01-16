@@ -18,7 +18,7 @@ export default function ProjectsPage(){
      },[border])
 
      const contentBioFormat = () => (
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence>
                <motion.div transition={transition} key={projectsData[project].bio} initial={{ x: 100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: 100, opacity: 0, transition: {duration: 0.3} }} className="content-bio">
                     <p className="content__bio-text">{projectsData[project].bio}</p>                         
                     <div className="content-bio__links">
@@ -53,6 +53,7 @@ export default function ProjectsPage(){
                          display: none;
                          align-items: center;
                          margin-bottom: 120px;
+                         color: #FFFFFF;
                     }
                     .projects__icon--pr{
                          width: 23vw;
