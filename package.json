@@ -11,7 +11,7 @@
     "framer-motion": "^1.7.0",
     "gsap": "^3.0.5",
     "hover-effect": "^1.1.0",
-    "next": "9.1.7",
+    "next": "9.3.2",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-rotating-text": "^1.4.1",
